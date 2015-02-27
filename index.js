@@ -36,6 +36,9 @@ module.exports = {
         model = model.toJSON();
       }
 
+      // 设置默认的 classPrefix
+      model.classPrefix = this.get('classPrefix');
+
       template = template(model, {
         helpers: this.templateHelpers,
         partials: this.templatePartials
