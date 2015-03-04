@@ -40,8 +40,8 @@ module.exports = {
       model.classPrefix = this.get('classPrefix');
 
       template = template(model, {
-        helpers: this.templateHelpers,
-        partials: this.templatePartials
+        helpers: $.extend({}, this.templateHelpers, this.get('templateHelpers')),
+        partials: $.extend({}, this.templatePartials, this.get('templatePartials'))
       });
     }
 
