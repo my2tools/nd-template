@@ -1,7 +1,6 @@
 /**
- * Description: index.js
- * Author: crossjs <liwenfu@crossjs.com>
- * Date: 2014-12-15 15:34:50
+ * @module Template
+ * @author crossjs <liwenfu@crossjs.com>
  */
 
 'use strict';
@@ -18,15 +17,9 @@ module.exports = {
   templatePartials: null,
 
   // 根据配置的模板和传入的数据，构建 this.element 和 templateElement
-  parseElementFromTemplate: function () {
-    // template 支持 id 选择器
-    var t, template = this.get('template'), model;
-
-    if (/^#/.test(template) &&
-        (t = document.getElementById(template.substring(1)))) {
-      template = t.innerHTML;
-      this.set('template', template);
-    }
+  parseElementFromTemplate: function() {
+    var template = this.get('template');
+    var model;
 
     if (typeof template === 'function') {
 
@@ -39,13 +32,39 @@ module.exports = {
       // 设置默认的 classPrefix
       model.classPrefix = this.get('classPrefix');
 
-      template = template(model, {
-        helpers: $.extend({}, this.templateHelpers, this.get('templateHelpers')),
-        partials: $.extend({}, this.templatePartials, this.get('templatePartials'))
-      });
+      template = template(model, this._getTemplateOptions());
     }
 
     this.element = $(template);
+  },
+
+  _getTemplateOptions: function() {
+    if (!this._templateOptions) {
+      this._templateOptions = {
+        helpers: $.extend({}, this.templateHelpers, this.get('templateHelpers')),
+        partials: $.extend({}, this.templatePartials, this.get('templatePartials'))
+      };
+    }
+
+    return this._templateOptions;
+  },
+
+  renderPartialTemplate: function(name, model) {
+    if (!model) {
+      model = {};
+    }
+
+    // 设置默认的 classPrefix
+    model.classPrefix = this.get('classPrefix');
+
+    var templateOptions = this._getTemplateOptions();
+    var tempaltePartial = templateOptions.partials[name];
+
+    if (tempaltePartial) {
+      this.$('[data-partial="' + name + '"]').html(
+        tempaltePartial.call(this, model, templateOptions)
+      );
+    }
   }
 
 };
