@@ -1,6 +1,6 @@
 # nd-template
 
-[![spm version](http://spmjs.io/badge/nd-template)](http://spmjs.io/package/nd-template)
+[![spm version](http://spm.crossjs.com/badge/nd-template)](http://spm.crossjs.com/package/nd-template)
 
 > 处理组件的模板渲染。fork 自 [arale-templatable](https://github.com/aralejs/templatable)
 
