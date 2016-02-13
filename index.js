@@ -6,12 +6,15 @@
 'use strict';
 
 var $ = require('jquery');
+var __ = require('nd-i18n');
 
 // 提供 Template 模板支持，默认引擎是 Handlebars
 module.exports = {
 
   // Handlebars 的 helpers
-  templateHelpers: null,
+  templateHelpers: {
+    __: __
+  },
 
   // Handlebars 的 partials
   templatePartials: null,

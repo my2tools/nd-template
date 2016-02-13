@@ -1,13 +1,15 @@
 # nd-template
 
-[![spm version](http://spm.crossjs.com/badge/nd-template)](http://spm.crossjs.com/package/nd-template)
+[![Travis](https://img.shields.io/travis/ndfront/nd-template.svg?style=flat-square)](https://github.com/ndfront/nd-template)
+[![Coveralls](https://img.shields.io/coveralls/ndfront/nd-template.svg?style=flat-square)](https://github.com/ndfront/nd-template)
+[![NPM version](https://img.shields.io/npm/v/nd-template.svg?style=flat-square)](https://npmjs.org/package/nd-template)
 
-> 处理组件的模板渲染。fork 自 [arale-templatable](https://github.com/aralejs/templatable)
+> 处理组件的模板渲染，支持 i18n Helper。
 
 ## 安装
 
-```
-$ spm install nd-template --save
+```bash
+$ npm install nd-template --save
 ```
 
 ## 使用
