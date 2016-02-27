@@ -5,7 +5,7 @@ var Template = require('../index');
 
 var Handlebars = require('handlebars')['default'];
 var expect = require('expect.js');
-var $ = require('jquery');
+var $ = require('nd-jquery');
 
 /*globals describe,it,afterEach*/
 

@@ -5,7 +5,7 @@
 
 'use strict';
 
-var $ = require('jquery');
+var $ = require('nd-jquery');
 var __ = require('nd-i18n');
 
 // 提供 Template 模板支持，默认引擎是 Handlebars
