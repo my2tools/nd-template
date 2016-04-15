@@ -1,6 +1,6 @@
 {
   "name": "nd-template",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "处理组件的模板渲染。",
   "keywords": [],
   "homepage": "https://github.com/ndfront/nd-template",
@@ -22,7 +22,7 @@
   "licenses": "MIT",
   "main": "index.js",
   "dependencies": {
-    "nd-i18n": "^3.0.0",
+    "nd-i18n": "^3.0.1",
     "nd-jquery": "^2.2.1"
   },
   "devDependencies": {
