@@ -23,7 +23,7 @@
   "main": "index.js",
   "dependencies": {
     "nd-i18n": "^3.0.1",
-    "nd-jquery": "^2.2.1"
+    "nd-jquery": "^2.2.2"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
